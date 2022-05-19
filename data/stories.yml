@@ -1,0 +1,151 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_mood_unhappy
+  - intent: affirm
+  - action: utter_happy
+
+- story: information
+  steps:
+  - intent: information 
+  - action: utter_information 
+- story: major 
+  steps:
+  - intent: major 
+  - action: utter_major 
+- story: tuition 
+  steps:
+  - intent: tuition 
+  - action: utter_tuition  
+- story: benchmark 
+  steps:
+  - intent: benchmark 
+  - action: utter_benchmark
+- story: out_of_scope
+  steps:
+  - intent: out_of_scope 
+  - action: utter_out_of_scope 
+- story: register 
+  steps:
+  - intent: register 
+  - action: utter_register  
+- story: reg_condition
+  steps:
+  - intent: reg_condition
+  - action: utter_reg_condition 
+- story: reg_method
+  steps:
+  - intent: reg_method
+  - action: utter_reg_method
+- story: job_jor 
+  steps:
+  - intent: job_jor 
+  - action: utter_job_jor 
+- story: job_EET
+  steps:
+  - intent: job_EET
+  - action: utter_job_EET 
+- story: job_Tel
+  steps:
+  - intent: job_Tel
+  - action: utter_job_Tel
+- story: job_CET
+  steps:
+  - intent: job_CET
+  - action: utter_job_CET 
+- story: job_Biotech
+  steps:
+  - intent: job_Biotech
+  - action: utter_job_Biotech
+- story: job_IT
+  steps:
+  - intent: job_IT
+  - action: utter_job_IT 
+- story: job_SW
+  steps:
+  - intent: job_SW
+  - action: utter_job_SW 
+- story: job_OS
+  steps:
+  - intent: job_OS
+  - action: utter_job_OS
+- story: job_HN
+  steps:
+  - intent: job_HN
+  - action: utter_job_HN 
+- story: job_Chemi
+  steps:
+  - intent: job_Chemi
+  - action: utter_job_Chemi 
+- story: job_ES
+  steps:
+  - intent: job_ES
+  - action: utter_job_ES 
+- story: job_Arc
+  steps:
+  - intent: job_Arc
+  - action: utter_job_Arc
+- story: job_Geo
+  steps:
+  - intent: job_Geo
+  - action: utter_job_Geo
+- story: job_EE
+  steps:
+  - intent: job_EE
+  - action: utter_job_EE
+- story: job_SE
+  steps:
+  - intent: job_SE
+  - action: utter_job_SE
+- story: job_Bioeng
+  steps:
+  - intent: job_Bioeng
+  - action: utter_job_Bioeng
+- story: job_ES
+  steps:
+  - intent: job_ES
+  - action: utter_job_ES
+- story: job_History
+  steps:
+  - intent: job_History
+  - action: utter_job_History
+- story: job_SA
+  steps:
+  - intent: job_SA
+  - action: utter_job_SA
+- story: job_NRE
+  steps:
+  - intent: job_NRE
+  - action: utter_job_NRE
+- story: job_ADA
+  steps:
+  - intent: job_ADA
+  - action: utter_job_ADA
+- story: job_APP
+  steps:
+  - intent: job_APP
+  - action: utter_job_APP
+- story: job_Philo
+  steps:
+  - intent: job_Philo
+  - action: utter_job_Philo
+- story: job_Liter
+  steps:
+  - intent: job_Liter
+  - action: utter_job_Liter
+- story: job_Sociology
+  steps:
+  - intent: job_Sociology
+  - action: utter_job_Sociology

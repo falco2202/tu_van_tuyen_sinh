@@ -1,0 +1,397 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hello bot
+      - hi bot
+      - bot ơi
+      - cho mình hỏi chút
+      - chào bạn nha
+      - chào bot
+      - hello
+      - xin chào  
+      - hey
+      - chào bạn
+      - alo alo
+      - hello ad
+      - chào ad
+      - em chào ad ạ
+
+  - intent: goodbye
+    examples: |
+      - bye bot
+      - bye bye
+      - tạm biệt bot 
+      - tạm biệt bạn nha
+      - bye
+      - gặp sau nha
+      - hẹn lần khác
+      - gặp sau
+
+  - intent: thankyou
+    examples: |
+      - cảm ơn bot nhá
+      - thanks nha
+      - cảm ơn nha
+      - good job
+      - cảm ơn bạn nha
+      - cảm ơn nhiều
+      - thank you
+      - cảm ơn bot nha
+      - thanks bot
+      - cảm ơn
+      - thank you so much
+      - great! Thanks
+  - intent: affirm
+    examples: |
+      - Vâng
+      - thật
+      - tất nhiên rồi
+      - nghe hay đấy
+      - sửa
+      - thôi được
+      - nghe hay đấy
+      - tuyệt vời
+      - vâng
+      - chuẩn rồi
+      - chắc chắn làm
+      - Tôi chắc chắn làm
+      - tôi làm
+      - tôi đồng ý
+  - intent: deny
+    examples: |
+      - không
+      - không bao giờ
+      - Tôi không nghĩ vậy
+      - không thích điều đó
+      - Không đời nào
+      - không hẳn vậy
+      - tôi không đồng ý
+      - Tôi không
+  - intent: mood_great
+    examples: |
+      - hoàn hảo
+      - rất tốt
+      - tuyệt vời
+      - kinh ngạc
+      - Tôi đang cảm thấy rất tốt
+      - Tôi rất tuyệt
+      - tôi ổn
+  - intent: mood_unhappy
+    examples: |
+      - buồn
+      - rất buồn
+      - không vui
+      - tồi tệ
+      - rất tệ
+      - kinh khủng
+      - không tốt lắm
+      - quá buồn
+  - intent: bot_challenge
+    examples: |
+      - bạn có phải robot không?
+      - Bạn có phải là con người?
+      - tôi đang nói chuyện với một con bot?
+      - tôi đang nói chuyện với một con người?
+      - bạn là ai?
+      - tên của bạn là gì?
+      - bạn là gì?
+
+  - intent: register
+    examples: |
+      - Cách thức đăng ký xét tuyển như thế nào?
+      - Thời gian đăng ký xét tuyển?
+      - Ngày nộp đơn đăng ký xét tuyển là ngày mấy?
+      - Đăng ký xét tuyển
+      - xét tuyển
+      - Hình thức xét tuyển
+      - Thông tin đăng ký xét tuyển
+
+  - intent: private
+    examples: |
+      - Trường có xét tuyển riêng ko?
+      - Thời gian xét tuyển riêng là khi nào?
+      - xét tuyển riêng
+      - Thông tin xét tuyển riêng
+  - intent: reg_nhses
+    examples: |
+      - Cho em hỏi điểm xét tuyển thi trung học phổ thông quốc gia của trường là bao nhiêu?
+      - Điểm xét tuyển thi trung học phổ thông quốc gia của trường là mấy?
+      - điểm thi trung học phổ thông để xét tuyển từng ngành học là bao nhiêu
+      - Cho em hỏi điểm xét tuyển thi trung học phổ thông là như thế nào?
+      - Cho em hỏi cách thức xét tuyển thi trung học phổ thông là như thế nào?
+  - intent: reg_sp
+    examples: |
+      - Cho em hỏi Trường có xét học bạ không ạ?
+      - Thông tin xét học bạ?
+      - Xét học bạ
+  - intent: reg_condition
+    examples: |
+      - Cho em hỏi điều kiện để xét tuyển là gì ạ?
+      - Các điều kiện xét tuyển của trường là như thế nào?
+      - điều kiện xét tuyển?
+      - cho em hỏi điều kiện để xét tuyển thẳng là gì ạ?
+      - Thông tin điều kiện xét tuyển?
+
+  - intent: reg_method
+    examples: |
+      - Trường có những phương thức xét tuyển nào?
+      - Thời hạn cho các phương thức xét tuyển?
+      - phương thức xét tuyển của trường là gì?
+      - Có bao nhiêu phương thức xét tuyển?
+      - phương thức xét tuyển
+  - intent: information
+    examples: |
+      - Địa chỉ của trường nằm ở đâu ạ?
+      - Mã trường là bao nhiêu?
+      - Địa chỉ
+      - vị trí
+      - Vị trí trường ở đâu
+      - địa chỉ trang web của trường
+      - trang web
+      - liên hệ
+      - thông tin liên hệ
+  
+  - intent: major
+    examples: |
+      - Trường đang đào tạo những ngành nào?
+      - Trường có tất cả là bao nhiêu ngành đào tạo?
+      - Thời gian đào tạo của mỗi ngành thì thường là mấy năm ạ?
+      - Các ngành đào tạo của trường?
+      - Ngành đào tạo gồm những ngành nào?
+  - intent: tuition
+    examples: |
+      - Học phí mỗi kỳ là bao nhiêu?
+      - Học phí mỗi tín chỉ là bao nhiêu?
+      - Nộp học phí như thế nào?
+      - Học phí mỗi năm tăng bao nhiêu phần trăm?
+      - khi nào nộp học phí?
+      - hình thức nộp học phí?
+      - học phí
+      - học phí là bao nhiêu?
+  - intent: benchmark
+    examples: |
+      - Điểm chuẩn năm vừa qua của các ngành
+      - Dự kiến điểm chuẩn năm nay là bao nhiêu
+      - Điểm chuẩn năm 2021 là bao nhiêu
+      - Điểm ngành ….. là bao nhiêu
+      - Em muốn tham khảo điểm chuẩn năm 2021 ạ?
+      - điểm chuẩn
+
+
+  - intent: out_of_scope
+    examples: |
+      - Trường có ký túc xá cho sinh viên ko?
+      - ký túc có xá gần trường không?
+      - Trường có thể giới thiệu cho mình một số nhà trọ ko?
+      - Có ký túc xá nữ ko?
+  - intent: job_jor
+    examples: |
+      - cơ hội việc làm của ngành báo chí có cao không?
+      - Những việc của ngành báo chí sau khi ra trường
+      - Những công việc tốt nhất của ngành báo chí
+      - Mức lương cơ bản của việc làm ngành báo chí 
+      - việc làm báo chí
+  - intent: job_EET
+    examples: |
+      - cơ hội việc làm của ngành Công nghệ kỹ thuật điện tử  có cao không?
+      - Những việc của ngành Công nghệ kỹ thuật điện tử  sau khi ra trường
+      - Những công việc tốt nhất của ngành Công nghệ kỹ thuật điện tử 
+      - Mức lương cơ bản của việc làm ngành Công nghệ kỹ thuật điện tử  
+      - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí nào? 
+
+  - intent: job_Tel 
+    examples: |
+      - cơ hội việc làm của ngành Viễn thông  có cao không?
+      - Những việc của ngành Viễn thông  sau khi ra trường
+      - Những công việc tốt nhất của ngành Viễn thông 
+      - Mức lương cơ bản của việc làm ngành Viễn thông  
+      - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí nào?	
+  - intent: job_CET
+    examples: |
+      - cơ hội việc làm của ngành Công nghệ kỹ thuật hóa học  có cao không?
+      - Những việc của ngành Công nghệ kỹ thuật hóa học sau khi ra trường
+      - Những công việc tốt nhất của ngành Công nghệ kỹ thuật hóa học  
+      - Mức lương cơ bản của việc làm ngành Công nghệ kỹ thuật hóa học  
+      - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí nào? 
+
+  - intent: job_Biotech
+    examples: |
+      - cơ hội việc làm của ngành công nghệ sinh học có cao không?
+      - Những việc của ngành công nghệ sinh học sau khi ra trường
+      - Những công việc tốt nhất của ngành công nghệ sinh học
+      - Mức lương cơ bản của việc làm ngành công nghệ sinh học
+      - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí nào?
+      - Học ngành Công nghệ sinh học ra trường làm gì?
+
+  - intent: job_IT
+    examples: |
+      - cơ hội việc làm của ngành công nghệ thông tin có cao không?
+      - Những việc của ngành công nghệ thông tin sau khi ra trường
+      - Những công việc tốt nhất của ngành công nghệ thông tin
+      - Mức lương cơ bản của việc làm ngành công nghệ thông tin
+      - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí nào? 
+
+  - intent: job_SW
+    examples: |
+      - cơ hội việc làm của ngành công tác xã hội có cao không?
+      - Những việc của ngành công tác xã hội sau khi ra trường
+      - Những công việc tốt nhất của ngành công tác xã hội 
+      - Mức lương cơ bản của việc làm ngành công tác xã hội 
+      - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí nào? 
+
+  - intent: job_OS
+    examples: |
+      - cơ hội việc làm của ngành  Đông Phương học có cao không?
+      - Những việc của ngành  Đông Phương học sau khi ra trường
+      - Những công việc tốt nhất của ngành  Đông Phương học 
+      - Mức lương cơ bản của việc làm ngành  Đông Phương học 
+      - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí nào? 
+
+  - intent: job_HN
+    examples: |
+      - Cơ hội việc làm của ngành  Hán Nôm có cao không?
+      - Những việc của ngành  Hán Nôm sau khi ra trường
+      - Những công việc tốt nhất của ngành  Hán Nôm 
+      - Mức lương cơ bản của việc làm ngành  Hán Nôm 
+      - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí nào? 
+
+  - intent: job_Chemi
+    examples: |
+        - Cơ hội việc làm của ngành  Hóa Học có cao không?
+        - Những việc của ngành  Hóa Học sau khi ra trường
+        - Những công việc tốt nhất của ngành  Hóa Học 
+        - Mức lương cơ bản của việc làm ngành  Hóa Học 
+        - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí nào? 
+
+
+  - intent: job_ES
+    examples: |
+      - Cơ hội việc làm của ngành  Khoa Học Môi Trường có cao không?
+      - Những việc của ngành  Khoa Học Môi Trường sau khi ra trường
+      - Những công việc tốt nhất của ngành  Khoa Học Môi Trường 
+      - Mức lương cơ bản của việc làm ngành  Khoa Học Môi Trường 
+      - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí nào? 
+
+  - intent: job_Arc
+    examples: |
+      - Cơ hội việc làm của ngành  Kiến trúc có cao không?
+      - Những việc của ngành  Kiến trúc sau khi ra trường
+      - Những công việc tốt nhất của ngành  Kiến trúc
+      - Mức lương cơ bản của việc làm ngành  Kiến trúc 
+      - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí nào? 
+
+  - intent: job_Geo
+    examples: |
+      - Cơ hội việc làm của ngành  kỹ thuật địa chất có cao không?
+      - Những việc của ngành  kỹ thuật địa chất sau khi ra trường
+      - Những công việc tốt nhất của ngành  kỹ thuật địa chất
+      - Mức lương cơ bản của việc làm ngành  kỹ thuật địa chất 
+      - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí nào? 
+
+  - intent: job_EE
+    examples: |
+      - Cơ hội việc làm của ngành  kỹ thuật môi trường có cao không?
+      - Những việc của ngành  kỹ thuật môi trường sau khi ra trường 
+      - Những công việc tốt nhất của ngành  kỹ thuật môi trường
+      - Mức lương cơ bản của việc làm ngành  kỹ thuật môi trường  
+      - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí nào? 
+
+  - intent: job_SE
+    examples: |
+      - Cơ hội việc làm của ngành  kỹ thuật phần mềm có cao không?
+      - Những việc của ngành  kỹ thuật phần mềm sau khi ra trường
+      - Những công việc tốt nhất của ngành  kỹ thuật phần mềm
+      - Mức lương cơ bản của việc làm ngành  kỹ thuật phần mềm 
+      - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí nào? 
+
+  - intent: job_Bioeng
+    examples: |
+      - Cơ hội việc làm của ngành  kỹ thuật sinh học có cao không?
+      - Những việc của ngành  kỹ thuật sinh học sau khi ra trường
+      - Những công việc tốt nhất của ngành  kỹ thuật sinh học
+      - Mức lương cơ bản của việc làm ngành kỹ thuật sinh học
+      - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí nào? 
+
+  - intent: job_History
+    examples: |
+      - Cơ hội việc làm của ngành  lịch sử có cao không?
+      - Những việc của ngành  lịch sử sau khi ra trường
+      - Những công việc tốt nhất của ngành  lịch sử
+      - Mức lương cơ bản của việc làm ngành lịch sử
+      - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí nào? 
+
+  - intent: job_SA
+    examples: |
+      - Cơ hội việc làm của ngành ngành quản lý nhà nước có cao không?
+      - Những việc của ngành ngành quản lý nhà nước sau khi ra trường
+      - Những công việc tốt nhất của ngành quản lý nhà nước
+      - Mức lương cơ bản của việc làm ngành quản lý nhà nước
+      - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí nào? 
+  - intent: job_NRE
+    examples: |
+      - Cơ hội việc làm của ngành ngành qquản lý tài nguyên và môi trường có cao không?
+      - Những việc của ngành ngành qquản lý tài nguyên và môi trường sau khi ra trường
+      - Những công việc tốt nhất của ngành qquản lý tài nguyên và môi trường
+      - Mức lương cơ bản của việc làm ngànhqquản lý tài nguyên và môi trường
+      - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí nào? 
+  - intent: job_ADA 
+    examples: |
+      - Cơ hội việc làm của ngành  quản trị và phân tích dữ liệu có cao không?
+      - Những việc của ngành  quản trị và phân tích dữ liệu sau khi ra trường
+      - Những công việc tốt nhất của ngành  quản trị và phân tích dữ liệu
+      - Mức lương cơ bản của việc làm ngành quản trị và phân tích dữ liệu
+      - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí nào? 
+
+  - intent: job_APP
+    examples: |
+      - Cơ hội việc làm của ngành toán ứng dụng có cao không?
+      - Những việc của ngành toán ứng dụng sau khi ra trường
+      - Những công việc tốt nhất của ngành toán ứng dụng
+      - Mức lương cơ bản của việc làm ngành toán ứng dụng
+      - Sinh viên tốt nghiệp có thể làm việc trong các lĩnh vực và vị trí nào? 
+  - intent: job_Philo
+    examples: |
+      - Cơ hội việc làm của ngành Triết học có cao không?
+      - Những việc của ngành Triết học sau khi ra trường
+      - Những công việc tốt nhất của ngành Triết học
+      - Mức lương cơ bản của việc làm ngành Triết học 
+      - việc làm Triết học
+
+  - intent: job_Liter
+    examples: |
+      - cơ hội việc làm của ngành văn học có cao không? 
+      - Những việc của ngành văn học sau khi ra trường 
+      - Những công việc tốt nhất của ngành văn học 
+      - Mức lương cơ bản của việc làm ngành văn học  
+      - việc làm văn học
+  - intent: job_Sociology 
+    examples: |
+      - cơ hội việc làm của ngành xã hội học có cao không?
+      - Những việc của ngành xã hội học sau khi ra trường
+      - Những công việc tốt nhất của ngành xã hội học
+      - Mức lương cơ bản của việc làm ngành xã hội học 
+      - việc làm xã hội học
+
+  - intent: scholarship
+    examples: |
+      - làm thế nào tôi có thể nhận được học bổng?
+      - tiêu chí cho học bổng
+      - học bổng
+      - Tôi cần thông tin về thủ tục xin học bổng.
+      - Tôi cần hướng dẫn thủ tục xin học bổng?
+      - Tôi cần hướng dẫn để đăng ký học bổng.
+      - Quy trình xin học bổng như thế nào?
+      - quá trình nhận học bổng là gì?
+      - làm thế nào tôi có thể nhận được học bổng?
+      - quy trình xin học bổng dựa trên nhu cầu là gì
+  - intent: contacts
+    examples: |
+      -cách liên hệ nhanh.
+      -chi tiết liên hệ
+      -làm thế nào để kết nối nhanh chóng
+      -làm thế nào để đạt được nhanh chóng
+      -số liên lạc nhanh
+      -liên hệ nhanh
+
